@@ -23,28 +23,15 @@ namespace Template.Application.Services
 
         public List<UserViewModel> Get()
         {
-            List<UserViewModel> _userViewModels = new List<UserViewModel>();
-
             IEnumerable<User> _users = this.userRepository.GetAll();
 
-            _userViewModels = mapper.Map<List<UserViewModel>>(_users);
-
-            //foreach (var item in _users)            
-            //    _userViewModels.Add(mapper.Map<UserViewModel>(item));
-
-            // _userViewModels.Add(new UserViewModel { Id = item.Id, Email = item.Email, Name = item.Name });
+            List<UserViewModel> _userViewModels = mapper.Map<List<UserViewModel>>(_users);
 
             return _userViewModels;
         }
 
         public bool Post(UserViewModel userViewModel)
         {
-            //User _user = new User
-            //{
-            //    Id = Guid.NewGuid(),
-            //    Email = userViewModel.Email,
-            //    Name = userViewModel.Name
-            //};
             User _user = mapper.Map<User>(userViewModel);
 
             this.userRepository.Create(_user);
