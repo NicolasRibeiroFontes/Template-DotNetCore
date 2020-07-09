@@ -23,7 +23,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-Cro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Data", "Template.Data\Template.Data.csproj", "{6E215AC8-4ADD-4327-8E09-496D86A7866E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.IoC", "Template.IoC\Template.IoC.csproj", "{EBB690B0-6FC8-49FE-BCF9-E649B086718B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.IoC", "Template.IoC\Template.IoC.csproj", "{EBB690B0-6FC8-49FE-BCF9-E649B086718B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Swagger", "Template.Swagger\Template.Swagger.csproj", "{43BD5FC5-686A-47C3-8B0D-C479ABD05F16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{EBB690B0-6FC8-49FE-BCF9-E649B086718B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB690B0-6FC8-49FE-BCF9-E649B086718B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB690B0-6FC8-49FE-BCF9-E649B086718B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BD5FC5-686A-47C3-8B0D-C479ABD05F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BD5FC5-686A-47C3-8B0D-C479ABD05F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BD5FC5-686A-47C3-8B0D-C479ABD05F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BD5FC5-686A-47C3-8B0D-C479ABD05F16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{D1622043-B330-4635-A337-284F24CD86C6} = {32B5710B-7A1E-4490-BF06-E9940194DAD1}
 		{6E215AC8-4ADD-4327-8E09-496D86A7866E} = {CA6EFB8A-8096-44F6-92C4-C1D3D358B126}
 		{EBB690B0-6FC8-49FE-BCF9-E649B086718B} = {D1622043-B330-4635-A337-284F24CD86C6}
+		{43BD5FC5-686A-47C3-8B0D-C479ABD05F16} = {D1622043-B330-4635-A337-284F24CD86C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F53D0144-A66D-447B-87B9-5ACE17D16941}
