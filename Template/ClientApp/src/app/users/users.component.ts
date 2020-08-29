@@ -28,6 +28,20 @@ export class UsersComponent implements OnInit {
     })
   }
 
+  save() {
+    debugger;
+    if (this.user.id) {
+      this.put();
+    } else {
+      this.post();
+    }    
+  }
+
+  openDetails(user) {
+    this.showList = false;
+    this.user = user;
+  }
+
   post() {
     this.userDataService.post(this.user).subscribe(data => {
       if (data) {
@@ -38,8 +52,38 @@ export class UsersComponent implements OnInit {
         alert('Erro ao cadastrar usuário');
       }
     }, error => {
-        console.log(error);
-        alert('erro interno do sistema');
+      console.log(error);
+      alert('erro interno do sistema');
+    })
+  }
+
+  put() {
+    this.userDataService.put(this.user).subscribe(data => {
+      if (data) {
+        alert('Usuário atualizado com sucesso');
+        this.get();
+        this.user = {};
+      } else {
+        alert('Erro ao atualizar usuário');
+      }
+    }, error => {
+      console.log(error);
+      alert('erro interno do sistema');
+    })
+  }
+
+  delete(user) {
+    this.userDataService.delete(user.id).subscribe(data => {
+      if (data) {
+        alert('Usuário excluído com sucesso');
+        this.get();
+        this.user = {};
+      } else {
+        alert('Erro ao excluir usuário');
+      }
+    }, error => {
+      console.log(error);
+      alert('erro interno do sistema');
     })
   }
 

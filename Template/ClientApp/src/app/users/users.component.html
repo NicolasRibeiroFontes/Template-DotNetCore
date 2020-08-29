@@ -13,7 +13,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
-        <th scope="row"><button class="btn-primary">Editar</button></th>
+        <th scope="row">
+          <button class="btn-primary" (click)="openDetails(user)">Editar</button>
+          <button class="btn-danger" (click)="delete(user)">Excluir</button>
+        </th>
         <th scope="row">{{user.id}}</th>
         <th scope="row">{{user.name}}</th>
         <th scope="row">{{user.email}}</th>
@@ -32,6 +35,6 @@
       <label for="exampleInputEmail">Email:</label>
       <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email" [(ngModel)]="user.email" name="email">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="post()">Save</button>
+    <button type="submit" class="btn btn-primary" (click)="save()">Save</button>
   </form>
 </div>
