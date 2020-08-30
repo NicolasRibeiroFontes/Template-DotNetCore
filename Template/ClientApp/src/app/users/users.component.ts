@@ -29,7 +29,6 @@ export class UsersComponent implements OnInit {
   }
 
   save() {
-    debugger;
     if (this.user.id) {
       this.put();
     } else {
