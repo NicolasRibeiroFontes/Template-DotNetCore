@@ -74,8 +74,8 @@ export class UsersComponent implements OnInit {
     })
   }
 
-  delete(user) {
-    this.userDataService.delete(user.id).subscribe(data => {
+  delete() {
+    this.userDataService.delete().subscribe(data => {
       if (data) {
         alert('Usuário excluído com sucesso');
         this.get();
